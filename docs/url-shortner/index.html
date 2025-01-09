@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: URL Shortner</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f2f7;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+        margin-top: 20px;
+      }
+
+      h3 {
+        color: #333;
+        margin-top: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+        border: 1px solid #f4f2f7;
+        width: 100%;
+      }
+
+      p {
+        color: #333;
+        margin-top: 20px;
+      }
+
+      a {
+        color: #256eff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        margin-top: 20px;
+        border: 0;
+        border-top: 1px solid #f4f2f7;
+      }
+      .doc-info {
+        margin-top: 20px;
+      }
+      .doc-info div {
+        margin-top: 10px;
+      }
+      /* .doc-info .technologies {
+        text-align: center;
+        background-color: rgb(242, 242, 242);
+        padding: 10px 5px;
+        border-radius: 8px;
+      } */
+      .doc-info .technologies span {
+        color: #333;
+        background-color: #d8d8d8;
+        padding: 2px 5px;
+        border-radius: 4px;
+        /* font-family: "Courier New", Courier, monospace; */
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="documentaion">
+        <h1>Sign Up and URL Shortening Process Guide</h1>
+        <img src="/images/urlShortner-thumbnail.png" alt="" />
+        <!-- <div><b>Document Creation Date:</b> Jan 09, 2025</div> -->
+        <div class="doc-info">
+          <div><b>Created By:</b> Shivam Rajput</div>
+          <div>
+            <b>Code Link:</b>
+            <a href="https://github.com/ShivamRajput7/url-shortner">
+              https://github.com/ShivamRajput7/url-shortner
+            </a>
+          </div>
+          <div class="technologies">
+            <b> Technologies used: </b>
+            <span>Node.js</span>, <span>Express</span>, <span>MongoDB</span> &
+            <span>EJS</span> (Embedded JavaScript) for views
+          </div>
+          <div></div>
+        </div>
+        <div style="height: 24px">&#8203;</div>
+        <hr />
+        <div style="height: 24px">&#8203;</div>
+
+        <div>
+          <h2><a href="http://localhost:8001/signup"># Sign Up Form</a></h2>
+        </div>
+
+        <div>
+          <h3>1. Type your name here</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/309cec94-4b43-48ac-957d-5ec4284a0746/e36301c1-c8f7-430f-8dd2-d3670db35784.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.4107&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=396&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD04OCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Type your name here"
+          />
+        </div>
+
+        <div>
+          <h3>2. Type your email.</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/0d7da2f0-e5b1-4c64-bfba-8c267ef3c597/95b65752-458a-44a9-9545-060713b0208f.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.5058&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=396&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD04OCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Type your email."
+          />
+        </div>
+
+        <div>
+          <h3>3. Type set a strong password</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/5e90c7f0-51ab-42d7-b80b-c33489a12ed7/c915aaa6-94b0-493c-a41f-6553ae85757d.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.6009&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=396&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD04OCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Type set a strong password "
+          />
+        </div>
+
+        <div>
+          <h3>4. Click on Sign Up</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/46fa0347-a88f-43a0-ae97-05220319d4c5/5c087205-c044-4063-b5bf-bfd7df33888d.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.6742&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=394&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD05MiZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Click on Sign Up"
+          />
+        </div>
+
+        <div>
+          <h3>5. Paste "your valid URL" into input</h3>
+          <p>
+            for example I pasted "<a
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              href="https://github.com/ShivamRajput7"
+              >https://github.com/ShivamRajput7</a
+            >" into input
+          </p>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/3edc9723-3f61-462e-b136-19b5405cadee/fafa3dde-e9e9-4b7d-8f02-594ce471f3f3.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.4995&fp-y=0.2217&fp-z=2.0314&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=366&mark-y=345&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz00NjkmaD0xMDMmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D"
+            alt='Paste "your valid URL" into input'
+          />
+        </div>
+
+        <div>
+          <h3>6. Click on Generate URL button</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/6dd5ab53-c600-4337-b4cc-76aabf09e835/a62f1c75-c6c8-4812-beee-5f795acabac5.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.2873&fp-z=2.3000&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=414&mark-y=384&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0zNzImaD0xMTImZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D"
+            alt="Click on Generate URL button "
+          />
+        </div>
+
+        <div>
+          <h3>7. You will get a short url</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/b4640bf4-bf62-431a-9f6c-4178f492cf37/9a4fc787-af2e-40d0-ba07-7cbd5bd2bb08.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5891&fp-y=0.3650&fp-z=1.8484&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=311&mark-y=409&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz01NzcmaD02MyZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="You will get a short url"
+          />
+        </div>
+
+        <div>
+          <h2><a href="http://localhost:8001/url"># URL Shortener</a></h2>
+        </div>
+
+        <div>
+          <h3>8. Click on Check Analytics</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/ad00ff9e-6bbb-4bdf-b98e-6323671b2d9c/45f8279a-0d46-40a9-9db4-dc49ed34a26d.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.9053&fp-y=0.9428&fp-z=4.0000&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=363&mark-y=545&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz03NjUmaD0yNjcmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D"
+            alt="Click on Check Analytics"
+          />
+        </div>
+
+        <div>
+          <h3>9. Type your registered email here</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/e64192a2-72ec-45f5-9e71-584e639eb6e7/472b2372-9f09-47c9-8cc7-e56577f93991.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.4582&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=396&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD04OCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Type your registered email here"
+          />
+        </div>
+
+        <div>
+          <h3>10. Type password</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/57be3571-d20b-4b5c-bd56-dade2f3a39e0/2692d0ce-3b6e-4072-b300-cc198345408f.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.5636&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=396&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD04OCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Type password"
+          />
+        </div>
+
+        <div>
+          <h3>11. Click on Login</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/88e92385-90b2-4ae9-921e-cce5d2bd7d02/e03a0a79-0596-4ae8-8c16-b26a21cf169e.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5005&fp-y=0.6356&fp-z=1.5924&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=287&mark-y=394&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz02MjcmaD05MiZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw"
+            alt="Click on Login"
+          />
+        </div>
+
+        <div>
+          <h3>12. You can see your created link here</h3>
+          <img
+            src="https://images.tango.us/workflows/d56a0fd7-334d-42f3-816c-551e3ba6fd69/steps/044f2a37-8501-4a1d-8067-a0eb83170561/9ecb8caa-c1b6-4499-b6f4-13dc0dcedd7f.png?fm=png&crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.2037&fp-z=1.0019&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=1&mark-y=32&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTk4Jmg9Mjk2JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D"
+            alt="You can see your created link here"
+          />
+        </div>
+
+        <br />
+        <hr />
+        <div>
+          <span> Documentation Created with </span
+          ><a
+            href="https://tango.ai?utm_source=magicCopy&utm_medium=magicCopy&utm_campaign=workflow%20export%20links"
+            target="_blank"
+            style="color: #256eff"
+            >Tango.ai
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
